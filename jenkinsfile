@@ -5,13 +5,13 @@ pipeline {
 
     stage('one') {
       steps{
-        sh; 'echo one'
+        sh 'echo one'
       }
     }
 
     stage('two') {
       steps{
-        sh; 'echo two'
+        sh 'echo two'
       }
     }
   }
