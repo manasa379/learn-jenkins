@@ -25,5 +25,4 @@ pipeline {
          mail bcc: '', body: 'Hello', cc: 'admin@gmail.com', from: '', replyTo: '', subject: 'Hello', to: 'manasa@gmail.com'
        }
     }
-
 }
