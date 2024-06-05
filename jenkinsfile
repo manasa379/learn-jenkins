@@ -8,7 +8,7 @@ pipeline {
         stage('one') {
             steps {
                 sh 'echo one'
-                mail bcc: '', body: 'Hello', cc: 'divya@gmail.com', from: '', replyTo: '', subject: 'hello', to: 'manasa@gmail.com'
+                mail bcc: '', body: 'Hello', cc: 'admin@gmail.com', from: '', replyTo: '', subject: 'Hello', to: 'manasa@gmail.com'
             }
         }
         stage('two'){
@@ -22,7 +22,7 @@ pipeline {
     post {
        always {
          echo 'sending Email'
-         mail bcc: '', body: 'Hello', cc: 'divya@gmail.com', from: '', replyTo: '', subject: 'hello', to: 'manasa@gmail.com'
+         mail bcc: '', body: 'Hello', cc: 'admin@gmail.com', from: '', replyTo: '', subject: 'Hello', to: 'manasa@gmail.com'
        }
     }
 
