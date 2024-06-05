@@ -2,14 +2,13 @@ pipeline {
     agent any
         node { label 'workstation' }
          }
-         environment {
-             SAMPLE_URL = "https://sample.com"
+
 
     stages {
         stage('one') {
             steps {
                 sh 'echo one'
-                sh ' echo $SAMPLE_URL'
+                mail bcc: '', body: 'Hello', cc: 'divya@gmail.com', from: '', replyTo: '', subject: 'hello', to: 'manasa@gmail.com'
             }
         }
         stage('two'){
@@ -23,6 +22,7 @@ pipeline {
     post {
        always {
          echo 'sending Email'
+         mail bcc: '', body: 'Hello', cc: 'divya@gmail.com', from: '', replyTo: '', subject: 'hello', to: 'manasa@gmail.com'
        }
     }
 
